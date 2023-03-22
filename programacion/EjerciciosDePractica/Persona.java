@@ -5,6 +5,7 @@ public class Persona {
     protected String nombre;
     protected String telefono;
     protected int edad;
+    protected int dni;
 
     public Persona(){
 

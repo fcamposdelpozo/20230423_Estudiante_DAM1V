@@ -1,10 +1,12 @@
 package programacion.EjerciciosDePractica;
 
+import java.text.DecimalFormat;
+
 public class Administrador extends Persona {
     private String codAdministrador;
     private String finca;
     private int numVecinos;
-    private float salario;
+    private double salario;
 
     public Administrador(){
 
@@ -22,28 +24,34 @@ public class Administrador extends Persona {
             return false;
         }
 
-        if(codAdministrador.substring(1, 1) != "A"){
+        if(codAdministrador.substring(1, 1).equals("A")){
             return false;
         }
 
         return true;
     }
 
-    public double salarioMaximo (float cuota){
-        double salario;
+    public void setSalarioMaximo (float cuota){
 
         salario = (numVecinos * cuota)*0.5;
 
+    }
+
+    public double getSalario(){
         return salario;
     }
 
     public String toString(){
+        DecimalFormat formato = new DecimalFormat();
 
         return "****ADMINISTRADOR****\n" + 
+        "Nombre: " + nombre + "\n" + 
+        "DNI: " + dni + "\n" + 
+        "Edad: " + edad + "\n" +
         "Codigo de administrador: " + codAdministrador + "\n" +
         "Finca en que trabaja: " + finca + "\n" +
         "Numero de vecinos en la finca: " + numVecinos + "\n" +
-        "Salario: " + salario; 
+        "Salario: " + formato.format(getSalario()); 
         
     }
 }

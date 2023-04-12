@@ -10,9 +10,7 @@ public class PersonaMain {
         int edad;
         int categoriaProfesional;
         int antigüedad;
-        int contador = 0;
-        Vector <Trabajador> vectorTrabajador;
-        vectorTrabajador = new Vector<Trabajador>();
+        Trabajador trabajador1 = new Trabajador();
 
         do{
             System.out.println("Introduce el nombre de la persona:");
@@ -28,20 +26,15 @@ public class PersonaMain {
             System.out.println("Introduce la antigüedad del trabajador:");
             antigüedad = in.nextInt();
             in.nextLine();
-            Trabajador trabajador1 = new Trabajador(nombre, telefono, edad, categoriaProfesional, antigüedad);
-
+            
             if(trabajador1.comprobarPersona() == true){
-                System.out.println("Datos ingresados correctamente.");
-                vectorTrabajador.add(trabajador1);
+                System.out.println("Datos ingresados correctamente.");        
             }else{
                 System.out.println("Los datos no han podido ser ingresados.");
             }
-
+            
             System.out.println(trabajador1.toString());
-
-            contador++;
-
-        }while(contador < 2);
+        }while(trabajador1.comprobarPersona() == false);
 
     }   
 }

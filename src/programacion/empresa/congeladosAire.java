@@ -5,7 +5,7 @@ public class congeladosAire extends productosCongelados {
     Vector<congeladosAire> composicionAire;
 
     public congeladosAire(String fechaEnvasado, String paisDeOrigen, int temperaturaRecomendada, String fechaDeCaducidad, int numeroDeLote){
-        super(fechaEnvasado, paisDeOrigen, temperaturaRecomendada, fechaDeCaducidad, numeroDeLote);
+        super(paisDeOrigen, temperaturaRecomendada, fechaDeCaducidad, numeroDeLote);
         composicionAire = new Vector<congeladosAire>();
     }
 

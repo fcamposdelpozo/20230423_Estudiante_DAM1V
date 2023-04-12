@@ -1,20 +1,17 @@
 package programacion.empresa;
 
-public class productosCongelados extends empresaAlimentaria {
-    String fechaEnvasado;
+public class productosCongelados extends producto {
     String paisDeOrigen;
     int temperaturaRecomendada;
 
-    public productosCongelados(String fechaEnvasado, String paisDeOrigen, int temperaturaRecomendada, String fechaDeCaducidad, int numeroDeLote){
-        super(fechaDeCaducidad, numeroDeLote);
-        this.fechaEnvasado = fechaEnvasado;
+    public productosCongelados(String paisDeOrigen, int temperaturaRecomendada, String fechaDeCaducidad, int numeroDeLote){
+        super(paisDeOrigen, fechaDeCaducidad, numeroDeLote);
         this.paisDeOrigen = paisDeOrigen;
         this.temperaturaRecomendada = temperaturaRecomendada;
     }
 
     public String toString(){
-        return "Fecha Envasado: " + fechaEnvasado + "\n" + 
-        "Pais de Origen: " + paisDeOrigen + "\n" + 
+        return super.toString() + "Pais de Origen: " + paisDeOrigen + "\n" + 
         "Temperatura recomendada: " + temperaturaRecomendada;
     }
 }

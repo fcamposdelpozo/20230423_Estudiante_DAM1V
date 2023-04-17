@@ -1,29 +1,33 @@
+import programacion.empresa.congeladosAgua;
+import programacion.empresa.productosCongelados;
 import programacion.empresa.productosFrescos;
 import programacion.empresa.productosRefrigerados;
-
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.time.*;
 
 public class EmpresaAlimentariaMain {
     public static void main(String[] args) {
+        //DECLARO VARIABLES
         Scanner in = new Scanner(System.in);
-        String respuesta;
-        int opcion;
-        String nombre;
-        String fechaDeCaducidad;
-        int numeroDeLote;
-        String fechaEnvasado;
-        String paisDeOrigen;
-        int codigoOrganismo;
-        int temperaturaRecomendada;
         ArrayList<productosFrescos> arrayProductoFresco = new ArrayList<productosFrescos>();
         ArrayList<productosRefrigerados> arrayProductoRefrigerado = new ArrayList<productosRefrigerados>();
+        
+        //METEMOS EL PRIMER PRODUCTO FRESCO
+        productosFrescos productoFresco1 = new productosFrescos("Lechugas", "12/03/2021", "España", "23/04/2021", 55647);
+        System.out.println(productoFresco1);
 
-        productosFrescos producto1 = new productosFrescos();
-        productosRefrigerados productoRefrigerado1 = new productosRefrigerados();
+        //METEMOS EL RESTO DE PRODUCTOS
+        productosRefrigerados productoRefrigerado1 = new productosRefrigerados("Gambas", 6543, 3, "Chile", "23/01/2022", 654321);
+            arrayProductoRefrigerado.add(productoRefrigerado1);
+        for(int i = 0; i < arrayProductoRefrigerado.size(); i++){
+            System.out.println(arrayProductoRefrigerado.get(i));
+        }
 
+        productosCongelados productoCongelado1 = new productosCongelados("Noruega", -3, "31/03/2024", 657654);
+        System.out.println(productoCongelado1);
         //REALIZO EL MENU PARA PEDIR QUE PRODUCTO QUIERE INCLUIR
-        do {
+        /* do {
             Menu();
             opcion = in.nextInt();
             in.nextLine();
@@ -120,15 +124,8 @@ public class EmpresaAlimentariaMain {
                     System.out.println();
                     break;
             }
-        } while (opcion != 4);
+        } while (opcion != 4); */
     }
 
-    public static void Menu() {
-        System.out.println("***MENU EMPRESA CONGELADOS***\n" +
-                "Elige una opcion:\n" +
-                "1. Ingresar producto fresco.\n" +
-                "2. Ingresar producto refrigerado.\n" +
-                "3. Ingresar producto congelado.\n" +
-                "4. SALIR.......");
-    }
+    
 }

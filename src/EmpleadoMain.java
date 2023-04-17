@@ -11,30 +11,18 @@ public class EmpleadoMain {
         final int MAX_EMPLEADOS = 5;
         Scanner in = new Scanner(System.in);
         int opcion = 0;
-        //Empleado [] arrayEmpleado = new Empleado[MAX_EMPLEADOS];
-        // int numEmpleados = 0;
+
         Vector<Empleado> vectorEmpleado;
         vectorEmpleado = new Vector<Empleado>();
 
         Empleado empleado1 = new Empleado("Fernando", "Programacion", 24, 7000);
         Empleado empleado2 = new Empleado("Alvaro", "Lengua", 21, 5200);
 
-        /* arrayEmpleado[numEmpleados] = empleado1;
-        numEmpleados++;
-        arrayEmpleado[numEmpleados] = empleado2;
-        numEmpleados++; */
-
         vectorEmpleado.add(empleado2);
         vectorEmpleado.add(empleado1);
 
         for(int i = 0; i < vectorEmpleado.size(); i++){
             System.out.println(vectorEmpleado.get(i));
-            /* if(arrayEmpleado[i] == null){
-                System.out.println("En la posicion " + (i + 1) + " no hay empleados ingresados.");
-            }else{
-                System.out.println(arrayEmpleado[i]);
-            } */
-
         }
     }
 

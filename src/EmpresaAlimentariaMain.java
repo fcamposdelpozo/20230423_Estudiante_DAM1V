@@ -2,12 +2,13 @@ import programacion.empresa.congeladosAgua;
 import programacion.empresa.productosCongelados;
 import programacion.empresa.productosFrescos;
 import programacion.empresa.productosRefrigerados;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.time.*;
 
 public class EmpresaAlimentariaMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //DECLARO VARIABLES
         Scanner in = new Scanner(System.in);
         ArrayList<productosFrescos> arrayProductoFresco = new ArrayList<productosFrescos>();
@@ -16,7 +17,9 @@ public class EmpresaAlimentariaMain {
         //METEMOS EL PRIMER PRODUCTO FRESCO
         productosFrescos productoFresco1 = new productosFrescos("Lechugas", "12/03/2021", "España", "23/04/2021", 55647);
         System.out.println(productoFresco1);
-
+        arrayProductoFresco.add(productoFresco1);
+        productoFresco1.ingresarEnDisco();
+        
         //METEMOS EL RESTO DE PRODUCTOS
         productosRefrigerados productoRefrigerado1 = new productosRefrigerados("Gambas", 6543, 3, "Chile", "23/01/2022", 654321);
             arrayProductoRefrigerado.add(productoRefrigerado1);
@@ -26,6 +29,23 @@ public class EmpresaAlimentariaMain {
 
         productosCongelados productoCongelado1 = new productosCongelados("Noruega", -3, "31/03/2024", 657654);
         System.out.println(productoCongelado1);
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //REALIZO EL MENU PARA PEDIR QUE PRODUCTO QUIERE INCLUIR
         /* do {
             Menu();

@@ -46,4 +46,5 @@ public abstract class producto {
         "Fecha de caducidad: " + fechaDeCaducidad + "\n" + 
         "Numero de lote: " + numeroDeLote;
     }
+
 }

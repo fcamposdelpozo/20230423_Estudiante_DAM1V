@@ -1,5 +1,4 @@
 package programacion.empresa;
-
-public class producto {
+public class EmpresaAlimentaria {
     
 }

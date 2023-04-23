@@ -14,5 +14,11 @@ public class ProductoRefrigerado extends producto {
         return super.toString() + " /Codigo Organismo: " + codigoOrganismo + " /Temperatura de Mantenimiento Recomendada: " + temperaturaMantenimiento;
     }
 
-    
+    public String toCsvLine() {
+        return nombre + "," + fechaCaducidad + "," + numeroLote + "," + fechaEnvasado + "," + paisOrigen + "," + codigoOrganismo + "," + temperaturaMantenimiento;
+    }
+
+    public static String csvHeader() {
+        return "nombre,fechaCaducidad,numeroLote,fechaEnvasado,paisOrigen,CodigoOrganismo,temperaturaMantenimiento";
+    }
 }

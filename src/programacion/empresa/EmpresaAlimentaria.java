@@ -88,4 +88,20 @@ public class EmpresaAlimentaria {
             escritor.close();
         }
     }
+
+    public void escribirFicheroRefrigerado() throws IOException {
+        FileWriter escritor = null;
+        try{
+            escritor = new FileWriter("C:\\Users\\Alvaro\\OneDrive\\Escritorio\\productosRefrigerados.csv", true);
+            escritor.write(ProductoRefrigerado.csvHeader() + "\n");
+            escritor.flush();
+            for(int i = 0; i < arrayProductosRefrigerados.size(); i++){
+                escritor.append(arrayProductosRefrigerados.get(i).toCsvLine() + "\n");
+            }
+        }catch(IOException exc){
+            System.out.println("Error al leer el archivo.");
+        }finally{
+            escritor.close();
+        }
+    }
 }

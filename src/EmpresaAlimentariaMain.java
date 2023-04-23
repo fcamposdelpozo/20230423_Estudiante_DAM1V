@@ -1,8 +1,11 @@
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import programacion.empresa.EmpresaAlimentaria;
 import programacion.empresa.ProductoCongelado;
 import programacion.empresa.ProductoFresco;
+import programacion.empresa.ProductoRefrigerado;
 
 public class EmpresaAlimentariaMain {
     public static void main(String[] args) throws IOException {
@@ -19,5 +22,9 @@ public class EmpresaAlimentariaMain {
         MiEmpresa.addProductoFresco(Tomate);
         MiEmpresa.addProductoFresco(Lechuga);
         MiEmpresa.escribirFicheroFresco();
+
+        //Creo productos refrigerados
+        ProductoRefrigerado vainilla = new ProductoRefrigerado("Vainilla", "23/02/2021", 23421, "12/01/2020", "LI", "7644T", 1);
+        
     }
 }

@@ -2,8 +2,10 @@ package programacion.empresa;
 
 import java.time.LocalDate;
 
-public class ProductoCongelado extends producto {
+public class ProductoCongelado extends Producto {
     int temperaturaRecomendada;
+  public static final String CSV_NOMBRE_FICHERO = "ProductosCongelados.csv";
+
 
     public ProductoCongelado(String nombre, String fechaCaducidad, int numeroLote, String fechaEnvasado,
             String paisOrigen, int temperaturaRecomendada) {

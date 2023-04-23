@@ -2,14 +2,15 @@ package programacion.empresa;
 
 import java.time.LocalDate;
 
-public abstract class producto {
+// Las clases y los ficheros java son UpperCammelCase
+public abstract class Producto {
     String nombre;
-    String fechaCaducidad;
+    String fechaCaducidad; // Intenta utilizar LocalDate para las fechas
     int numeroLote;
-    String fechaEnvasado;
+    String fechaEnvasado; // Intenta utilizar LocalDate para las fechas
     String paisOrigen;
 
-    public producto(String nombre, String fechaCaducidad, int numeroLote, String fechaEnvasado, String paisOrigen) {
+    public Producto(String nombre, String fechaCaducidad, int numeroLote, String fechaEnvasado, String paisOrigen) {
         this.nombre = nombre;
         this.fechaCaducidad = fechaCaducidad;
         this.numeroLote = numeroLote;

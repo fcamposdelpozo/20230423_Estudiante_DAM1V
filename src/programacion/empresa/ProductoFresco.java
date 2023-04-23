@@ -1,6 +1,7 @@
 package programacion.empresa;
 
-public class ProductoFresco extends producto {
+public class ProductoFresco extends Producto {
+  public static final String CSV_NOMBRE_FICHERO = "ProductosFrescos.csv";
 
     public ProductoFresco(String nombre, String fechaCaducidad, int numeroLote, String fechaEnvasado,
             String paisOrigen) {

@@ -1,8 +1,10 @@
 package programacion.empresa;
 
-public class ProductoRefrigerado extends producto {
+public class ProductoRefrigerado extends Producto {
     String codigoOrganismo;
     int temperaturaMantenimiento;
+  public static final String CSV_NOMBRE_FICHERO = "ProductosRefrigerados.csv";
+
 
     public ProductoRefrigerado(String nombre, String fechaCaducidad, int numeroLote, String fechaEnvasado, String paisOrigen, String codigoOrganismo, int temperaturaMantenimiento){
         super(nombre, fechaCaducidad, numeroLote, fechaEnvasado, paisOrigen);

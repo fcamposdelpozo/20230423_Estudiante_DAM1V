@@ -25,6 +25,15 @@ public class EmpresaAlimentariaMain {
 
         //Creo productos refrigerados
         ProductoRefrigerado vainilla = new ProductoRefrigerado("Vainilla", "23/02/2021", 23421, "12/01/2020", "LI", "7644T", 1);
+        ProductoRefrigerado GambasCongeladas = new ProductoRefrigerado("Gambas Congeladas", "27/12/2023", 345345, "23/10/2023", "ALE", "23432", -3);
+        MiEmpresa.addProductoRefrigerado(GambasCongeladas);
+        MiEmpresa.addProductoRefrigerado(vainilla);
+        MiEmpresa.escribirFicheroRefrigerado();
+       
+        //Prueba de Coleccion HasMap
+        HashMap <Object,String> prueba = new HashMap<>();
+        prueba.put(GambasCongeladas, "Las gambas vienen de Alemania");
+        System.out.println(prueba.get(GambasCongeladas));
         
     }
 }
